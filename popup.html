@@ -1,0 +1,60 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+</head>
+
+<body>
+    <div class="container">
+        YouTube Enhancement Suite
+        <div class="tab_aligner"></div>
+
+        <input id="tab1" type="radio" name="tabs" checked>
+        <label for="tab1">Settings</label>
+
+        <input id="tab2" type="radio" name="tabs">
+        <label for="tab2">Manage History</label>
+
+        <div class="content-container">
+            <section id="settings">
+                <h3>Video Player Preferences</h3>
+                <hr>
+                <div class="checkbox-container">
+                    <label class="switch">
+                        <input type="checkbox" name="brand_icon">
+                        <span class="slider"></span>
+                    </label>
+                    <span class="slider-text"> Brand Icon</span>
+
+                    <label class="switch">
+                        <input type="checkbox" name="end_cards">
+                        <span class="slider"></span>
+                    </label>
+                    <span class="slider-text"> End Cards</span>
+                </div>
+            </section>
+            <section id="cleanup">
+                <h3>Manage YouTube Activity</h3>
+                <hr>
+                <div class="checkbox-container">
+                <input type="checkbox" name="watch_history"> Delete Watch History
+                <br />
+                <input type="checkbox" name="search_history"> Delete Search History
+                <br />
+                <input type="checkbox" name="comments"> Delete Comments
+                <br />
+                <input type="checkbox" name="livechats"> Delete Livechats
+                <br />
+                </div>
+                <button id="clear-activity">Clear Activity</button>
+            </section>
+        </div>
+    </div>
+
+
+</body>
+<script src="scripts/jquery-3.3.1.min.js"></script>
+<script src="scripts/content.js"></script>
+</html>

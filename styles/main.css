@@ -1,0 +1,171 @@
+html {
+    background-color: rgba(19, 19, 19, 1);
+    color: white;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+.container {
+    height: 40px;
+    background: red;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.tab {
+    display: inline-block;
+    cursor: pointer;
+    height: 20px;
+    width: 140px;
+    background-color: rgb(35, 35, 35);
+    text-align: center;
+}
+
+.tab_aligner {
+    display: inline-block;
+    height: 100%;
+    vertical-align: bottom;
+    width: 50px;
+}
+
+input[type=checkbox] {
+    transform: scale(1.5);
+    padding: 10px;
+    margin-top: 8px;
+}
+
+input[type=radio] {
+    display: none;
+}
+
+label {
+    display: inline-block;
+    text-align: center;
+    border: solid transparent;
+    cursor: pointer;
+    height: 20px;
+    width: 140px;
+    color: white;
+    background-color: rgb(19, 19, 18);
+    text-align: center;
+}
+
+label:hover {
+    cursor: pointer;
+}
+
+input:checked+label {
+    color: black;
+    background-color: white;
+}
+
+#tab1:checked~div>#settings,
+#tab2:checked~div>#cleanup {
+    display: block;
+}
+
+.content-container {
+    width: 600px;
+    min-height: 150px;
+    max-height: 550px;
+}
+
+section {
+    padding-left: 10px;
+    padding-right: 20px;
+    display: none;
+    border-top: 1px solid #ddd;
+}
+
+h3 {
+    color: red;
+    margin-bottom: 0;
+}
+
+button {
+    margin: 5px;
+    margin-bottom: 20px;
+}
+
+div.checkbox-container {
+    display: block;
+    max-width: 40%;
+    width: 0 auto;
+    margin: 0px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 80px;
+    height: 34px;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: red;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(46px);
+    -ms-transform: translateX(46px);
+    transform: translateX(46px);
+}
+
+.slider::after {
+    position: absolute;
+    content: "SHOW";
+    color: black;
+    bottom: 10px;
+    right: 5px;
+}
+
+input:checked+.slider::after {
+    position: absolute;
+    content: "HIDE";
+    color: white;
+    -webkit-transform: translateX(-46px);
+    -ms-transform: translateX(-46px);
+    transform: translateX(-46px);
+    bottom: 10px;
+    right: -5px;
+}
+
+.slider-text {
+    position: relative;
+    bottom: 13px;
+}
